@@ -22,8 +22,10 @@ from sklearn.metrics import (accuracy_score, precision_score, recall_score,
                              roc_curve, precision_recall_curve, average_precision_score)
 
 RANDOM_STATE = 42
-DATA_PATH = "data/NIJ_DataSet.csv"
-os.makedirs("outputs", exist_ok=True)
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(ROOT_DIR, "data", "NIJ_DataSet.csv")
+OUTPUT_DIR = os.path.join(ROOT_DIR, "outputs")
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 sns.set_theme(style="whitegrid")
 
 SCORE_COL = "Supervision_Risk_Score_First"
@@ -34,7 +36,7 @@ DROP_COLS = ["ID", SCORE_COL, "Supervision_Level_First",
 
 def save_plot(filename):
     plt.tight_layout()
-    plt.savefig(f"outputs/{filename}", dpi=120)
+    plt.savefig(os.path.join(OUTPUT_DIR, filename), dpi=120)
     plt.show()
 
 
@@ -222,7 +224,7 @@ for name, model in fitted.items():
 results = pd.DataFrame(rows).set_index("Model").round(4)
 print("\nTEST SET RESULTS")
 print(results.to_string())
-results.to_csv("outputs/risk_results_table.csv")
+results.to_csv(os.path.join(OUTPUT_DIR, "risk_results_table.csv"))
 
 fig, axes = plt.subplots(2, 3, figsize=(15, 9))
 for ax, name in zip(axes.flat, fitted):
@@ -290,6 +292,7 @@ while True:
     print(f"\nID {text}")
     print(f"  Predicted risk level: {predicted.upper()}")
     print("  Chances:", ", ".join(f"{k} {v * 100:.0f}%" for k, v in chances.items()))
-    print(f"  Actual score in the data: {df.loc[row, SCORE_COL]:.0f} (out of 10)")
-    print("  Note: this is a student model for learning, not a real decision tool.")
+    print(f"  Recorded target score (dataset ground truth): {df.loc[row, SCORE_COL]:.0f}/10")
+    print("  Demo note: this ID is an existing dataset record; its target is already known.")
+    print("  Research-only model. Do not use for hiring, parole, or other real decisions.")
 print("Done.")
