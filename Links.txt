@@ -1,0 +1,14 @@
+PROJECT LINKS
+
+1. GitHub repository:
+https://github.com/roshaanumar/risk-research-assistant-ml-project
+
+2. Dataset source (NIJ training data):
+https://data.ojp.usdoj.gov/Corrections/NII-s-Recidivism-Challenge-Training-Dataset/8tjc-3ibv
+
+3. Official NIJ challenge and codebook:
+https://nij.ojp.gov/funding/recidivism-forecasting-challenge
+https://nij.ojp.gov/funding/recidivism-forecasting-challenge-appendix-2-codebook.pdf
+
+4. Presentation/video link: Add after uploading to Google Drive.
+5. Course report: Add final report link/file when complete.
