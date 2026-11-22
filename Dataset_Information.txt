@@ -1,0 +1,16 @@
+DATASET INFORMATION
+
+Dataset name: NIJ Recidivism Forecasting Challenge — Training Dataset
+Local project filename: data/NIJ_DataSet.csv
+Original source portal (training dataset):
+https://data.ojp.usdoj.gov/Corrections/NII-s-Recidivism-Challenge-Training-Dataset/8tjc-3ibv
+
+Official NIJ challenge and codebook:
+https://nij.ojp.gov/funding/recidivism-forecasting-challenge
+https://nij.ojp.gov/funding/recidivism-forecasting-challenge-appendix-2-codebook.pdf
+
+Modeling target: Supervision_Risk_Score_First (first parole supervision risk assessment score, 1–10). Scores are grouped 1–4 = Low, 5–7 = Medium, 8–10 = High.
+
+Rows reported after removing records with a missing target: 17,698.
+
+The original data contains identifying record IDs and sensitive criminal-justice-related attributes. Preserve the dataset's context and limitations. Before redistributing or using it beyond this educational project, check the source portal's terms, attribution requirements, and restrictions. The project does not establish that these data or predictions are appropriate for operational decisions.
