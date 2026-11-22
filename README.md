@@ -12,9 +12,9 @@ risk-research-assistant-ml-project/
 │   └── risk_research_assistant.py
 ├── notebooks/
 │   └── risk_research_assistant_ml_project.ipynb
-├── data/                            # dataset not tracked
-├── outputs/                          # generated files not tracked
-├── docs/figures/                     # example result plots
+├── data/                          
+├── outputs/                          
+├── docs/figures/                     
 ├── requirements.txt
 └── README.md
 ```
