@@ -1,11 +1,1 @@
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
-.venv/
-venv/
-.DS_Store
-
-data/*
-!data/.gitkeep
-outputs/*
-!outputs/.gitkeep
+__pycache__/\n*.pyc\n.ipynb_checkpoints/\n.venv/\nvenv/\n.DS_Store\n\ndata/*\n!data/.gitkeep\n!data/NIJ_DataSet.csv\n\noutputs/*\n!outputs/.gitkeep\n
